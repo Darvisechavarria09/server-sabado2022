@@ -9,15 +9,6 @@ export let rutas=express.Router()
 //Lista de servicios que ofrece el api
 rutas.get('/api/v1/sabado',controladorHabitacion.buscarTodas)
 rutas.get('/api/v1/sabado/:id',controladorHabitacion.buscarPorId)
-
-rutas.post('/api/v1/sabado', function (req, res) {
-    res.send('Hola soy un POST')
-})
-
-rutas.put('/api/v1/sabado', function (req, res) {
-    res.send('Hola soy un PUT')
-})
-
-rutas.delete('/api/v1/sabado', function (req, res) {
-    res.send('Hola soy un DELETE')
-})
+rutas.post('/api/v1/sabado',controladorHabitacion.registrar)
+rutas.put('/api/v1/sabado/:id',controladorHabitacion.editar)
+rutas.delete('/api/v1/sabado/:id', controladorHabitacion.eliminar)

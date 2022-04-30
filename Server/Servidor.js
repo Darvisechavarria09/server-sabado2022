@@ -8,6 +8,7 @@ export class Servidor{
     
     constructor(){
         this.app = express()//atributo APP guarda a express
+        this.llamarAuxiliares()//activo midlewares o ayudas
         this.atenderPeticiones()
     }
 
@@ -21,5 +22,10 @@ export class Servidor{
     //ENRUTAR
     atenderPeticiones(){
         this.app.use('/',rutas)
+    }
+
+    //Llamar auxiliares(midlewares)
+    llamarAuxiliares(){
+        this.app.use(express.json()) //ayudante para recibir datos por el body de la peticion
     }
 }

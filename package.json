@@ -1,6 +1,6 @@
 {
   "name": "servidor",
-  "type":"module",
+  "type": "module",
   "version": "1.0.0",
   "description": "es una prueba de api rest",
   "main": "app.js",
@@ -15,6 +15,7 @@
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.0.0",
-    "express": "^4.17.3"
+    "express": "^4.17.3",
+    "mongoose": "^6.3.3"
   }
 }

@@ -5,7 +5,7 @@ export class ServicioHabitacion{
 
     constructor(){}
 
-    registrar(habitacion){
+    async registrar(habitacion){
         let habitacionARegistrar=new modeloHabitacion(habitacion)
         return await habitacionARegistrar.save()
     }
